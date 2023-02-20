@@ -1,0 +1,89 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+}
+
+.navbar .wrapper {
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.wrapper .left{
+    width: 20%;
+}
+.wrapper .right{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.search-container {
+    position: relative;
+}
+
+.search-container .search-icon {
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    color: #aaa;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.search-container input {
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    text-indent: 60px;
+    padding: 5px;
+    border: none;
+    outline-color: #1778F2;
+    border-radius: 10px;
+    color: #2b2a2a;
+    background-color: #ddd;
+    /* transition: all 0.5s ease; */
+}
+
+.search-container input:focus {
+    width: 400px;
+}
+
+.search-container input::placeholder {
+    letter-spacing: 1px;
+    color: #2b2a2a;
+}
+
+
+.wrapper ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff0f07;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60d05;
+}
+
+.btn-login {
+    padding: 12px;
+}
+.user-avatar{
+    cursor: pointer;
+}

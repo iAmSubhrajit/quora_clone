@@ -1,0 +1,66 @@
+.add-question-container .navbar .right {
+    visibility: hidden;
+}
+
+.add-question {
+    width: 100%;
+    margin-top: 40px;
+}
+
+form .question-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+form#add-question-form {
+    position: relative;
+}
+
+.question-input label {
+    position: absolute;
+    left: 150px;
+    font-size: 25px;
+    color: #aaa;
+    font-weight: 900;
+}
+
+form#add-question-form input[type='text'] {
+    width: 80vw;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    outline-color: #1778F2;
+    text-indent: 135px;
+}
+
+form#add-question-form input[type='text']::placeholder {
+    word-spacing: 5px;
+}
+
+.buttons {
+    position: absolute;
+    right: 140px;
+    top: 70px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.buttons input {
+
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff0f07;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons input:hover {
+    background-color: #e60d05;
+}
