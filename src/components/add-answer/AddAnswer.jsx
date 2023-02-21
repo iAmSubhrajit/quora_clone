@@ -56,7 +56,7 @@ const AddAnswer = ({ questions, qna, setQna }) => {
                   }}
                 >{value?.question}</Link>
               </li>
-            ))}
+            )).reverse()}
           </ul>
         </div>
         <div className="right">

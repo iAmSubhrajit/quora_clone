@@ -28,7 +28,7 @@ const Home = ({ questions, qna, setQna }) => {
                   {item?.answer}
                 </div>
               </div>
-            ))}
+            )).reverse()}
           </div>
           <div className="right">
             <h2 className='title'>Questions List</h2>
@@ -37,7 +37,7 @@ const Home = ({ questions, qna, setQna }) => {
                 <li className="question-list" key={index}>
                   <Link to='/add-answer' className='question'>{item?.question}</Link>
                 </li>
-              ))}
+              )).reverse()}
             </ul>
           </div>
         </div>
