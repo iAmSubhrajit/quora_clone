@@ -98,7 +98,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff0f07;
+    background: #aaa;
 }
 
 
