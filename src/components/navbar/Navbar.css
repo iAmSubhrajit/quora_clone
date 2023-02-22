@@ -95,7 +95,7 @@ button:hover {
 }
 
 
-@media screen and (max-width:639px) {
+@media screen and (max-width:690px) {
     .navbar .wrapper {
         padding: 0 10px;
     }
@@ -113,10 +113,6 @@ button:hover {
     .search-container .search-icon {
         height: 30px;
         width: 30px;
-        padding: 5px;
-        color: #aaa;
-        background-color: #f4f4f4;
-        border-radius: 50%;
         position: absolute;
         top: 5px;
         left: 5px;
@@ -176,5 +172,50 @@ button:hover {
         display: block;
         position: fixed;
         right: 0;
+    }
+}
+
+@media screen and (min-width:691px) and (max-width:910px) {
+    .navbar .wrapper {
+        padding: 0 15px;
+    }
+
+    .wrapper .left {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left .logo img {
+        width: 140px;
+    }
+
+    .wrapper .right {
+        width: 70%;
+    }
+
+    .search-container .search-icon {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+    }
+
+    .search-container input {
+        font-size: 18px;
+        width: 250px;
+        height: 50px;
+        padding-left: 50px;
+
+    }
+
+    .search-container input::placeholder {
+        letter-spacing: 0.5px;
+    }
+
+    button {
+        padding: 0 10px;
+        font-size: 18px;
     }
 }
