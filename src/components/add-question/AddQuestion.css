@@ -38,7 +38,7 @@ form#add-question-form input[type='text'] {
     font-size: 20px;
     border: none;
     outline-color: #1778F2;
-    text-indent: 135px;
+    padding-left: 135px;
 }
 
 form#add-question-form input[type='text']::placeholder {
@@ -55,10 +55,9 @@ form#add-question-form input[type='text']::placeholder {
 }
 
 .buttons input {
-
     padding: 12px;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     background-color: #ff0f07;
     border-color: transparent;
@@ -68,4 +67,45 @@ form#add-question-form input[type='text']::placeholder {
 
 .buttons input:hover {
     background-color: #e60d05;
+}
+
+.buttons input[type='reset'] {
+    font-size: 18px;
+}
+
+@media screen and (max-width:690px) {
+    .question-input label {
+        position: absolute;
+        left: 45px;
+        font-size: 20px;
+    }
+
+    form#add-question-form input[type='text'] {
+
+        font-size: 16px;
+        padding-left: 100px;
+    }
+
+    form#add-question-form input[type='text']::placeholder {
+        word-spacing: 3px;
+    }
+
+    .buttons {
+        position: absolute;
+        right: 50px;
+        top: 70px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .buttons input {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .buttons input[type='reset'] {
+        font-size: 16px;
+    }
+
 }
