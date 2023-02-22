@@ -1,5 +1,5 @@
 import { Avatar } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from '../navbar/Navbar';
 import { Link } from 'react-router-dom';
 import './Home.css'
@@ -15,11 +15,12 @@ const Home = ({ questions, qna, setQna }) => {
       <main>
         <div className="container">
           <div className="left">
+            {qna.length === 0 && <h3 className='no-result-message'>No results found</h3>}
             {qna && qna.map((item, index) => (
               <div className="qna-card" key={index}>
                 <div className="user-info">
                   <Avatar style={{ height: '40px', width: '40px', marginRight: '10px' }} />
-                  <h2>{item?.questionedBy}</h2>
+                  <h2>{item?.answeredBy}</h2>
                 </div>
                 <div className="question">
                   <h3>{item?.question}</h3>

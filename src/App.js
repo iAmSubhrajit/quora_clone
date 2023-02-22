@@ -8,11 +8,13 @@ import Home from './components/home/Home';
 import Login from './components/login/Login';
 
 import Signup from './components/signup/Signup';
+import { quesAndAns, quesList } from './constants';
 import { questionAndAnswers, questionLists } from './data';
 
 function App() {
-  const [qna, setQna] = useState(questionAndAnswers)
-  const [questions, setQuestions] = useState(questionLists)
+  const [qna, setQna] = useState(quesAndAns || questionAndAnswers)
+  const [questions, setQuestions] = useState(quesList || questionLists)
+
   return (
     <div className="app">
 

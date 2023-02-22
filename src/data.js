@@ -9,7 +9,7 @@ export const questionAndAnswers = [
     },
     {
         id: "2",
-        answeredBy: "arun tiwari",
+        answeredBy: "Jatin Rawat",
         questionedBy: "Rahul Kumar",
         question: "What color is the sky?",
         answer: "The sky is of color blue.The color is blue because The Raman Effect",
@@ -23,9 +23,8 @@ export const questionAndAnswers = [
         answer: "The world war 1 started in 1914",
 
     }
-
-
 ];
+
 export const questionLists = [
     {
         id: '1',
@@ -54,12 +53,4 @@ export const questionLists = [
         question: "Difference between strees and strain?",
     }
 
-]
-
-export const users = [
-    {
-        username: "kamal rastogi",
-        password: "12345",
-        email: "hello@gmail.com"
-    },
 ];

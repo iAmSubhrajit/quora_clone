@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { user } from '../../constants'
 import Navbar from '../navbar/Navbar'
@@ -20,6 +20,7 @@ const AddAnswer = ({ questions, qna, setQna }) => {
     if (user?.islogged) {
       if (quesBy && answerInput) {
         updateQNA.push({
+          id: +qna[qna.length - 1].id + +1,
           answeredBy: user?.username,
           questionedBy: quesBy,
           question: ques,
@@ -38,6 +39,10 @@ const AddAnswer = ({ questions, qna, setQna }) => {
       navigate('/login')
     }
   }
+  useEffect(() => {
+    localStorage.setItem('qna', JSON.stringify(qna))
+  }, [qna])
+
   return (
     <div className="add-answer-container">
       <Navbar />
@@ -60,25 +65,25 @@ const AddAnswer = ({ questions, qna, setQna }) => {
           </ul>
         </div>
         <div className="right">
-            <label htmlFor="add-answer">Answer:</label>
-            <textarea
-              type="text"
-              id='add-answer'
-              placeholder='Type your answer here........'
-              onChange={(e) => setAnswerInput(e.target.value)}
-              ref={answerInputRef}
-              minLength={1}
-              value={answerInput}
-            />
-            <div className="buttons">
-              <Link to='/'>
-                <button>Cancel</button>
-              </Link>
-              <button
-                type='button'
-                onClick={handleAddAnswer}
-              >Add</button>
-            </div>
+          <label htmlFor="add-answer">Answer:</label>
+          <textarea
+            type="text"
+            id='add-answer'
+            placeholder='Type your answer here........'
+            onChange={(e) => setAnswerInput(e.target.value)}
+            ref={answerInputRef}
+            minLength={1}
+            value={answerInput}
+          />
+          <div className="buttons">
+            <Link to='/'>
+              <button>Cancel</button>
+            </Link>
+            <button
+              type='button'
+              onClick={handleAddAnswer}
+            >Add</button>
+          </div>
         </div>
       </div>
     </div>

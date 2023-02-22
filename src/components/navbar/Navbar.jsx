@@ -3,8 +3,7 @@ import './Navbar.css'
 import Logo from '../../assets/images/Logo.svg'
 import { NavLink } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
-import { user } from '../../constants';
-import { questionAndAnswers } from '../../data';
+import { quesAndAns, user } from '../../constants';
 import { Avatar } from '@mui/material';
 
 const Navbar = ({ qna, setQna }) => {
@@ -13,7 +12,6 @@ const Navbar = ({ qna, setQna }) => {
         if (e.charCode === 13) {
             const qnaFilter = qna.filter((qna) => qna.question.toLowerCase().includes(searchInput.toLowerCase()))
             setQna(qnaFilter)
-
         }
     }
     const handleLogOut = () => {
@@ -42,7 +40,7 @@ const Navbar = ({ qna, setQna }) => {
                             placeholder='search for questions.....'
                             onChange={(e) => {
                                 setSearchInput(e.target.value);
-                                setQna(questionAndAnswers)
+                                setQna(quesAndAns)
                             }}
                             onKeyPress={handleOnEnter}
                             value={searchInput}
@@ -71,7 +69,7 @@ const Navbar = ({ qna, setQna }) => {
                                 {user?.islogged ?
 
                                     <div className="user_info">
-                                        <Avatar className='user-avatar' onClick={handleLogOut} style={{backgroundColor:'#ff0f07'}}/>
+                                        <Avatar className='user-avatar' onClick={handleLogOut} style={{ backgroundColor: '#ff0f07' }} />
                                     </div>
 
                                     :

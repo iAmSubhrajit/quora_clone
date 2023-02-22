@@ -8,20 +8,21 @@ import './AddQuestion.css'
 const AddQuestion = ({ questions, setQuestions }) => {
   const [questionInput, setQuestionInput] = useState('')
   const navigate = useNavigate()
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const updateQuestion = [...questions]
     if (user?.islogged) {
       updateQuestion.push({
+        id: +questions[questions.length - 1].id + +1,
         questionedBy: user?.username,
         question: questionInput
       })
       setQuestions(updateQuestion)
+      localStorage.setItem('quesList', JSON.stringify(updateQuestion))
       setQuestionInput('')
-      console.log(questions)
     }
-    else{
+    else {
       navigate('/login')
     }
   }

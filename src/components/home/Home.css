@@ -9,7 +9,11 @@
 
 .home .container .left {
     width: 70%;
-    /* background-color: #fff; */
+}
+
+.left .no-result-message {
+    text-align: center;
+    color: #fff;
 }
 
 .left .qna-card {
@@ -49,17 +53,45 @@
 }
 
 .right ul.question-lists {
+    height: 50vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     list-style: none;
+    overflow-y: scroll;
 }
-.right .question-list{
+
+.right .question-list {
     margin-bottom: 15px;
 }
+
 .question-list .question {
     font-size: 18px;
     color: #2966e9;
     text-decoration: none;
 }
+
+.question-list .question:hover {
+    /* font-weight: 600; */
+    color: #ff0f07;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ddd; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+  }
