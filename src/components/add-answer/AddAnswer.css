@@ -1,14 +1,17 @@
 .add-answer-container .navbar .right {
     visibility: hidden;
 }
+.add-answer-container .navbar .search-container{
+    display: none;
+}
 
 .add-answer {
     width: 100%;
     margin: 40px 20px;
     display: flex;
-    /* justify-content: space-around; */
     gap: 20px;
-    /* align-items: center; */
+    position: relative;
+    top: 90px;
 }
 
 .add-answer .left {

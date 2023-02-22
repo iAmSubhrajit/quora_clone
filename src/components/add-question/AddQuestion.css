@@ -2,9 +2,14 @@
     visibility: hidden;
 }
 
+.add-question-container .navbar .search-container {
+    display: none;
+}
+
 .add-question {
     width: 100%;
-    margin-top: 40px;
+    position: relative;
+    top: 120px;
 }
 
 form .question-input {

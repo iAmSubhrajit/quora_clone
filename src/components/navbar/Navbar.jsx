@@ -5,9 +5,12 @@ import { NavLink } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import { quesAndAns, user } from '../../constants';
 import { Avatar } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = ({ qna, setQna }) => {
     const [searchInput, setSearchInput] = useState('')
+    const [menuOpen, setMenuOpen] = useState(false)
     const handleOnEnter = (e) => {
         if (e.charCode === 13) {
             const qnaFilter = qna.filter((qna) => qna.question.toLowerCase().includes(searchInput.toLowerCase()))
@@ -29,60 +32,61 @@ const Navbar = ({ qna, setQna }) => {
                         <img src={Logo} alt="logo" />
                     </NavLink>
                 </div>
-                <div className="right">
-                    <div className="search-container">
-                        <label htmlFor="question-search">
-                            <SearchIcon className='search-icon' />
-                        </label>
-                        <input
-                            type="text"
-                            id='question-search'
-                            placeholder='search for questions.....'
-                            onChange={(e) => {
-                                setSearchInput(e.target.value);
-                                setQna(quesAndAns)
-                            }}
-                            onKeyPress={handleOnEnter}
-                            value={searchInput}
-                        />
-                    </div>
+                <div className="search-container">
+                    <label htmlFor="question-search">
+                        <SearchIcon className='search-icon' />
+                    </label>
+                    <input
+                        type="text"
+                        id='question-search'
+                        placeholder='search for questions.....'
+                        onChange={(e) => {
+                            setSearchInput(e.target.value);
+                            setQna(quesAndAns)
+                        }}
+                        onKeyPress={handleOnEnter}
+                        value={searchInput}
+                    />
+                </div>
+                <div className='right'>
 
-                    <ul className='lists'>
-                        <ul>
-                            <li className="list-item">
-                                <NavLink to='add-question'>
-                                    <button>
-                                        <div>Add</div>
-                                        <div>questions</div>
-                                    </button>
+                    <ul className={`lists ${menuOpen && 'active'}`}>
+                        <li className="list-item">
+                            <NavLink to='add-question'>
+                                <button>
+                                    <div>Add</div>
+                                    <div>questions</div>
+                                </button>
+                            </NavLink>
+                        </li>
+                        <li className="list-item">
+                            <NavLink to='/add-answer'>
+                                <button>
+                                    <div>Add</div>
+                                    <div>answers</div>
+                                </button>
+                            </NavLink>
+                        </li>
+                        <li>
+                            {user?.islogged ?
+
+                                <div className="user_info">
+                                    <Avatar className='user-avatar' onClick={handleLogOut} style={{ backgroundColor: '#B92B27' }} />
+                                </div>
+
+                                :
+
+                                <NavLink to='/login' className='list-item' >
+                                    <button className='btn-login' type='button'>Login</button>
                                 </NavLink>
-                            </li>
-                            <li className="list-item">
-                                <NavLink to='/add-answer'>
-                                    <button>
-                                        <div>Add</div>
-                                        <div>answers</div>
-                                    </button>
-                                </NavLink>
-                            </li>
-                            <li>
-                                {user?.islogged ?
 
-                                    <div className="user_info">
-                                        <Avatar className='user-avatar' onClick={handleLogOut} style={{ backgroundColor: '#ff0f07' }} />
-                                    </div>
-
-                                    :
-
-                                    <NavLink to='/login' className='list-item' >
-                                        <button className='btn-login' type='button'>Login</button>
-                                    </NavLink>
-
-                                }
-                            </li>
-                        </ul>
+                            }
+                        </li>
                     </ul>
 
+                    <div className="menu" onClick={() => setMenuOpen(!menuOpen)} >
+                        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+                    </div>
                 </div>
 
             </div>

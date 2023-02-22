@@ -1,23 +1,29 @@
 .navbar {
     width: 100%;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
 .navbar .wrapper {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-.wrapper .left{
+
+.wrapper .left {
     width: 20%;
 }
-.wrapper .right{
+
+.wrapper .right {
     width: 80%;
     display: flex;
     justify-content: center;
 }
+
 .search-container {
     position: relative;
 }
@@ -27,7 +33,7 @@
     width: 45px;
     padding: 5px;
     color: #aaa;
-    background-color: #fff;
+    background-color: #f4f4f4;
     border-radius: 50%;
     position: absolute;
     top: 8px;
@@ -38,23 +44,16 @@
     font-size: 20px;
     width: 300px;
     height: 60px;
-    text-indent: 60px;
-    padding: 5px;
+    padding-left: 60px;
     border: none;
-    outline-color: #1778F2;
-    border-radius: 10px;
+    outline-color: #B92B27;
+    border-radius: 50px;
     color: #2b2a2a;
     background-color: #ddd;
-    /* transition: all 0.5s ease; */
-}
-
-.search-container input:focus {
-    width: 400px;
 }
 
 .search-container input::placeholder {
     letter-spacing: 1px;
-    color: #2b2a2a;
 }
 
 
@@ -69,7 +68,7 @@
 button {
     padding: 0 40px;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     background-color: #ff0f07;
     border-color: transparent;
@@ -78,14 +77,104 @@ button {
 }
 
 button:hover {
-    background-color: #e60d05;
+    background-color: #B92B27;
 }
 
 .btn-login {
     padding: 12px;
 }
-.user-avatar{
+
+.user-avatar {
     cursor: pointer;
     height: 40px;
     width: 40px;
+}
+
+.menu {
+    display: none;
+}
+
+
+@media screen and (max-width:639px) {
+    .navbar .wrapper {
+        padding: 0 10px;
+    }
+
+    .wrapper .left {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left .logo img {
+        width: 100px;
+    }
+
+    .search-container .search-icon {
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        color: #aaa;
+        background-color: #f4f4f4;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    .search-container input {
+        font-size: 16px;
+        width: 200px;
+        height: 40px;
+        padding-left: 40px;
+
+    }
+
+    .search-container input::placeholder {
+        letter-spacing: normal;
+    }
+
+    button {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .wrapper .right {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+
+    .right .lists {
+        height: 100vh;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 64px;
+        right: -300px;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 3;
+        transition: all 0.5s ease;
+    }
+
+    .right .lists li {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .right .active {
+        display: block;
+        position: fixed;
+        right: 0;
+    }
 }

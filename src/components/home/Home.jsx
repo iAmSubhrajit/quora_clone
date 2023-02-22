@@ -19,7 +19,7 @@ const Home = ({ questions, qna, setQna }) => {
             {qna && qna.map((item, index) => (
               <div className="qna-card" key={index}>
                 <div className="user-info">
-                  <Avatar style={{ height: '40px', width: '40px', marginRight: '10px' }} />
+                  <Avatar style={{ marginRight: '5px' }} />
                   <h2>{item?.answeredBy}</h2>
                 </div>
                 <div className="question">
