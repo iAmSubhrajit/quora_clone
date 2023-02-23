@@ -54,7 +54,7 @@
 }
 
 .right ul.question-lists {
-    height: 45vh;
+    max-height: 45vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -77,28 +77,6 @@
 .question-list .question:hover {
     /* font-weight: 600; */
     color: #ff0f07;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 10px;
-
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
 }
 
 
