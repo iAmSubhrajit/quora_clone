@@ -21,6 +21,7 @@ const AddQuestion = ({ questions, setQuestions }) => {
       setQuestions(updateQuestion)
       localStorage.setItem('quesList', JSON.stringify(updateQuestion))
       setQuestionInput('')
+      alert('Question added')
     }
     else {
       navigate('/login')

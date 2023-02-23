@@ -19,7 +19,7 @@ const AddAnswer = ({ questions, qna, setQna }) => {
     const updateQNA = [...qna]
     if (user?.islogged) {
       if (!answerInput) {
-        alert('Please Write your answer')
+        alert('Please write your answer...')
       }
       else if (quesBy) {
         updateQNA.push({
@@ -32,10 +32,10 @@ const AddAnswer = ({ questions, qna, setQna }) => {
         })
         setQna(updateQNA)
         setAnswerInput('')
-        alert('Answer Added')
+        alert('Answer added')
       }
       else {
-        alert('Please Select a question from the Questions List')
+        alert('Please select a question from the questions list.')
       }
     }
     else {
