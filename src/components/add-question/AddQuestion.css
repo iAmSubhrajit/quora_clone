@@ -26,14 +26,14 @@ form#add-question-form {
 
 .question-input label {
     position: absolute;
-    left: 150px;
+    left: 6%;
     font-size: 25px;
     color: #aaa;
     font-weight: 900;
 }
 
 form#add-question-form input[type='text'] {
-    width: 80vw;
+    width: 90vw;
     height: 50px;
     font-size: 20px;
     border: none;
@@ -47,8 +47,8 @@ form#add-question-form input[type='text']::placeholder {
 
 .buttons {
     position: absolute;
-    right: 140px;
-    top: 70px;
+    right: 6%;
+    top: 125%;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
@@ -77,14 +77,13 @@ form#add-question-form input[type='text']::placeholder {
     .add-question {
         top: 80px;
     }
+
     .question-input label {
         position: absolute;
-        left: 45px;
         font-size: 20px;
     }
 
     form#add-question-form input[type='text'] {
-
         font-size: 16px;
         padding-left: 100px;
     }
@@ -94,11 +93,6 @@ form#add-question-form input[type='text']::placeholder {
     }
 
     .buttons {
-        position: absolute;
-        right: 50px;
-        top: 60px;
-        display: flex;
-        justify-content: flex-end;
         gap: 15px;
     }
 
@@ -109,6 +103,9 @@ form#add-question-form input[type='text']::placeholder {
 
     .buttons input[type='reset'] {
         font-size: 16px;
+    }
+    form#add-question-form input[type='text']::placeholder {
+        word-spacing: normal;
     }
 
 }
