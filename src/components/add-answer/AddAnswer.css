@@ -53,6 +53,7 @@
 .add-answer .right textarea {
     width: 60vw;
     height: 200px;
+    min-width: 170px;
     font-size: 20px;
     border: none;
     outline-color: #1778F2;
@@ -66,6 +67,7 @@
 .right .buttons {
     position: relative;
     top: 10px;
+    right: 140px;
 }
 
 .right .buttons button {

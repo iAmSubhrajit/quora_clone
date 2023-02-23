@@ -35,6 +35,7 @@ form#add-question-form {
 form#add-question-form input[type='text'] {
     width: 90vw;
     height: 50px;
+    min-width: 320px;
     font-size: 20px;
     border: none;
     outline-color: #1778F2;
